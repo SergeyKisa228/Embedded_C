@@ -22,8 +22,11 @@ The project demonstrates working with microcontroller peripherals on bare metal 
  
 ## Project structure
 LUMINAR_STIM_ACP/
+
 ├── main.c # The main source code
+
 ├── schematic.txt # Сonnection diagram
+
 └── LUMINAR_STIM_ACP.atsln # The file for Atmel Studio
 
 ## Using
