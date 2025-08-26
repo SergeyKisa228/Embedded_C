@@ -29,48 +29,6 @@ LUMINAR_STIM_ACP/
 
 └── LUMINAR_STIM_ACP.atsln # The file for Atmel Studio
 
-## Connection Diagram
-
-#---------------------#          #-------------------#
-|   POTENTIOMETER     |          |   ATmega16A       |
-|    10 кОм           |          |                   |
-|                     |          |               PA0 +<---+ Analog input
-|  Shift   VCC        |          |                   |     | (ADC0)
-|   |       |         |          |               PD5 +--->+ PWM output
-|   +-------+         |          |                   |     | (OC1A)
-|   |       |         |          |               PD2 +<---+ Button
-|   GND    Output     +--------->+ ADC0 (PA0)        |
-|                     |          |                   |
-#---------------------#          #-------------------#
-                                 |
-                                 |
-#---------------------#          |
-|     BUTTON          |          |
-|                     |          |
-|  contact 1          +--------->+ INT0 (PD2)
-|                     |          |
-|  contact 2          +--------->+ GND
-|                     |          |
-#---------------------#          |
-                                 |
-#---------------------#          |
-|    LED              |          |
-|                     |          |
-|    (+)              +<---------+ OC1A (PD5)
-|                     |          |
-|    (-)              +--------->+ GND (resistor 220 Ом)
-|                     |          |
-#---------------------#          |
-                                 |
-#---------------------#          |
-|    POWER            |          |
-|                     |          |
-|   VCC (+5V)         +--------->+ VCC, AVCC
-|                     |          |
-|   GND               +--------->+ GND, AGND
-|                     |          |
-#---------------------#          +-------------------+
-
 ## Using
 
 1. Assemble the circuit as described above
