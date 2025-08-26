@@ -1,0 +1,40 @@
+#-------------------#          #-----------------#          #-----------------#
+|   ATmega16A       |          |   LM75          |          |   PCF8574       |
+|                   |          |   temp          |          |   I2C-LCD       |
+#-------------------#          #-----------------#          #-----------------#
+|                   |          |                 |          |                 |
+| PC0 (SCL) --------|--------->| SCL             |          | SCL             |
+| PC1 (SDA) --------|--------->| SDA             |          | SDA             |
+|                   |          |                 |          |                 |
+| VCC --------------|--------->| VCC (3.3V)      |          | VCC             |
+| GND --------------|--------->| GND             |          | GND             |
+|                   |          | A0 - GND        |          | A0 - GND        |
+|                   |          | A1 - GND        |          | A1 - GND        |
+|                   |          | A2 - GND        |          | A2 - GND        |
+#-------------------#          #-----------------#          #-----------------#
+                                                                     |
+                                                                     |
+                                                             #-----------------#
+                                                             |   LCD 16x2      |
+                                                             |  DISPLAY        |
+                                                             #-----------------#
+                                                             |                 |
+                                                             | D4 - P4         |
+                                                             | D5 - P5         |
+                                                             | D6 - P6         |
+                                                             | D7 - P7         |
+                                                             | RS - P0         |
+                                                             | RW - P1 (GND)   |
+                                                             | E - P2          |
+                                                             | Backlight - P3  |
+                                                             | VCC - 5V        |
+                                                             | GND - GND       |
+                                                             #-----------------#
+
+Additional components:
+- Pull-up resistors: 4.7 kOhm between SCL and VCC, and between SDA and VCC
+- LCD backlight resistor: 220 ohms between P3 and VCC
+- Quartz resonator: 8 MHz between XTAL1 and XTAL2
+- Capacitors: 22 pF from XTAL1 to GND, 22 pF from XTAL2 to GND
+- Reset button: 10 kOhm between RST and VCC, button between RST and GND
+- Filter capacitor: 100 nF between VCC and GND
