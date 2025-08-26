@@ -32,11 +32,11 @@ The project demonstrates working with microcontroller peripherals and I2C commun
 
 Digital_Thermometer/
 
-├── main.c              # Main source code
+├── main.c              **# Main source code**
 
-├── schematic.txt       # Connection diagram
+├── schematic.txt       **# Connection diagram**
 
-└── Digital_Thermometer.atsln  # Atmel Studio solution file
+└── Digital_Thermometer.atsln  **# Atmel Studio solution file**
 
 ## Additional components:
 
