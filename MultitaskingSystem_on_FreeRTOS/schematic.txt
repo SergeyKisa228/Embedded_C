@@ -1,0 +1,33 @@
+#-------------------------------#
+|       STM32F103C8T6           |
+|        (Blue Pill)            |
+|                               |
+|                               |
+|                       +3.3V   |---+
+|                       GND     |---+
+|                       PC13    |---[LED]---[220Ω]---GND
+|                       PA0     |---[Button]---GND
+|                       PA9     |---[TX]-->--[RX] USB-UART
+|                       PA10    |---[RX]--<--[TX] Converter
+|                       NRST    |
+|                       BOOT0   |---GND (using jumper for programming)
+#-------------------------------#
+        |           |
+        |           |
+    #---+-----------+---#
+    |                   |
+ [SWD] [3.3V]   [GND] [USB]
+ Connector         (Power only)
+
+
+
+Necessary components:
+
+1.Microcontroller: STM32F103C8T6 (Blue Pill)
+2.LED: any 3mm or 5mm LED
+3.Resistor: 220 ohms
+4.Button
+5.USB-UART Converter: CH340G, CP2102 or FT232RL
+6.ST-Link/V2: Programmer-debugger
+7.Breadboard and connecting wires
+8.Power supply: USB cable to power the board
