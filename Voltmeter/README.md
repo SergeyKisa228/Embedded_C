@@ -15,6 +15,65 @@ which measures the external analog voltage and transmits the measurement results
 
 **Accuracy:** ±0.01V (after calibration)
 
+## Configuring a project in STM32CubeIDE
+
+***1. Creating a project***
+
+    --- File → Create → The STM32 project
+
+    --- Select the STM32F103C8T6 microroller
+
+    --- Create a project called "Voltmeter"
+
+***2. Configure peripherals in the .ioc file***
+
+**ADC1:**
+
+    --- Channel: ADC_CHANNEL_0 (PA0)
+
+    --- External trigger conversion source: Timer recording 2 
+        Comparison of 2 events
+
+    --- DMA settings: Cyclic mode, High priority
+
+    --- Sampling time: 71.5 cycles
+
+**TIM2:**
+
+    --- Channel2: CH2 output comparison
+
+    --- Mode: Enable matching
+
+    --- Pulse: 5 
+
+    --- Prescaler: 6399
+
+    --- Counter period: 9
+
+**USART1:**
+
+    --- Mode: Asynchronous
+
+    --- Baud Rate: 9600 baud
+
+**Setting the clock frequency:**
+
+    --- SYSCLK: 64 MHz
+
+    --- APB1: 32 MHz
+
+    --- APB2: 16 MHz
+
+    --- ADC pre-scaler: /2
+
+***3. Configuring the linker to support float in printf***
+
+    --- Project → Properties → C/C++ Build → Settings
+
+    --- Tool Settings → MCU Linker → Miscellaneous
+
+    --- In the "Other flags" field, add: -u _printf_float
+
 ## Using
 **a)** Connect the measured voltage to pin PA0 (do not exceed 3.3V!)
 
