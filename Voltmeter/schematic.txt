@@ -1,0 +1,78 @@
+#---------------------#          #-------------------#          #-------------------#
+|   Voltage source    |          | STM32F103C8T6     |          |      Computer     |
+| 	              |          |  (Blue Pill)      |          |                   |
+|                     |          |                   |          |                   |
+|  #---------------#  |          |  #-------------#  |          |  #-------------#  |
+|  |               |  |          |  |             |  |          |  |             |  |
+|  |    Input      |  |          |  |    PA0      |  |          |  |   USB_port  |  |
+|  |   voltage     o--+----------+--o ADC1_IN0    |  |          |  |             |  |
+|  |  (0-3.3V)     |  |          |  |             |  |          |  |             |  |
+|  |               |  |          |  |             |  |          |  |             |  |
+|  #---------------#  |          |  |             |  |          |  |             |  |
+|                     |          |  |    PA9      o--+----------+--o RX          |  |
+|                     |          |  |    (TX)     |  |          |  |             |  |
+|                     |          |  |             |  |          |  |   USB-UART  |  |
+|                     |          |  |    PA10     o--+----------+--o TX          |  |
+|                     |          |  |    (RX)     |  |          |  |  converter  |  |
+|                     |          |  |             |  |          |  |  (CH340G)   |  |
+|                     |          |  |             |  |          |  |             |  |
+|                     |          |  |             |  |          |  |             |  |
+|                     |          |  |    GND      o--+----------+--o GND         |  |
+|                     |          |  |             |  |          |  |             |  |
+|                     |          |  #-------------#  |          |  #-------------#  |
+|                     |          |                   |          |                   |
+#---------------------#          #-------------------#          #-------------------#
+
+                                       #-------------------#
+                                       | Programmer        |
+                                       | (ST-Link/V2)      |
+                                       |                   |
+                                       |  SWDIO o----------+--o PA13
+                                       |                   |
+                                       |  SWCLK o----------+--o PA14
+                                       |                   |
+                                       |  3.3V  o----------+--o 3.3V
+                                       |                   |
+                                       |  GND   o----------+--o GND
+                                       |                   |
+                                       #-------------------#
+
+Components and connections:
+
+1. Measured voltage:
+
+	Source: Any constant voltage source 0-3.3V
+
+	Connection:
+
+   		--- Plus → PA0 (ADC1_IN0)
+    		--- Minus → GND
+
+2. STM32 power supply:
+
+    --- 3.3V: From the stabilizer on the board or from the ST-Link
+    --- GND: Common land
+
+3. Programming and debugging:
+
+	ST-Link/V2:
+
+    		--- SWDIO → PA13
+    		--- SWCLK → PA14
+    		--- 3.3V → 3.3V
+    		--- GND → GND
+
+4. Data transmission:
+
+	USB-UART Converter (CH340G, CP2102, FT232RL):
+
+   	 	--- TX → PA10 (RX)
+   	 	--- RX → PA9 (TX)
+   	 	--- GND → GND
+
+5. Protective components:
+
+	At the entrance of PA0:
+   	 	--- 1kOhm resistor 
+    		--- 3.3V Zener diode 
+    		--- 100nF capacitor
