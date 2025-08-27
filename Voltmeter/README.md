@@ -67,3 +67,9 @@ which measures the external analog voltage and transmits the measurement results
 ## Author
 
 **SergeyKisa228**
+
+## Links:
+
+**STM32F103C8T6** documentation - https://www.st.com/en/microcontrollers-microprocessors/stm32f103c8.html
+
+**STM32CubeIDE** - https://www.st.com/en/development-tools/stm32cubeide.html
