@@ -16,11 +16,11 @@ which measures the external analog voltage and transmits the measurement results
 **Accuracy:** ±0.01V (after calibration)
 
 ## Using
-a) Connect the measured voltage to pin PA0 (do not exceed 3.3V!)
+**a)** Connect the measured voltage to pin PA0 (do not exceed 3.3V!)
 
-b) Connect the USB-UART converter to your computer
+**b)** Connect the USB-UART converter to your computer
 
-c) Open the serial terminal with the settings:
+**c)** Open the serial terminal with the settings:
 
     --- Baud Rate: 9600
 
@@ -32,7 +32,7 @@ c) Open the serial terminal with the settings:
 
     --- Flow Control: None
 
-d) The voltmeter will output voltage values in the format: **Voltage: X.XX V**
+**d)** The voltmeter will output voltage values in the format: **Voltage: X.XX V**
 
 ## Implementation features
 
@@ -63,3 +63,7 @@ d) The voltmeter will output voltage values in the format: **Voltage: X.XX V**
 --- Use a voltage divider to measure higher voltages.
 
 --- Use a stable 3.3V power supply
+
+## Author
+
+**SergeyKisa228**
