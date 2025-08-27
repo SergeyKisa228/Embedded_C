@@ -73,11 +73,11 @@ The project was created in STM32CubeIDE using the latest technologies:
 
 The project consists of three tasks:
 
-1. vTaskLED: The LED flashes on the PC13 pin with an interval of 500 ms
+**1. vTaskLED:** The LED flashes on the PC13 pin with an interval of 500 ms
 
-2. vTaskButton: Polls the button on pin PA0, sends the click counter to the queue
+**2. vTaskButton:** Polls the button on pin PA0, sends the click counter to the queue
 
-3. vTaskUART: Accepts data from the queue and outputs the "Button pressed X times" message to the UART
+**3. vTaskUART:** Accepts data from the queue and outputs the "Button pressed X times" message to the UART
 
 Data is transferred between tasks via a message queue (queueButton), and access to the UART is protected by a mutex (uartMutexHandle).
 
