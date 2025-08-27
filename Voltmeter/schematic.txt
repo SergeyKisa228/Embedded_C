@@ -1,6 +1,6 @@
 #---------------------#          #-------------------#          #-------------------#
 |   Voltage source    |          | STM32F103C8T6     |          |      Computer     |
-| 	              |          |  (Blue Pill)      |          |                   |
+| 	                  |          |  (Blue Pill)      |          |                   |
 |                     |          |                   |          |                   |
 |  #---------------#  |          |  #-------------#  |          |  #-------------#  |
 |  |               |  |          |  |             |  |          |  |             |  |
@@ -75,4 +75,5 @@ Components and connections:
 	At the entrance of PA0:
    	 	--- 1kOhm resistor 
     		--- 3.3V Zener diode 
+
     		--- 100nF capacitor
