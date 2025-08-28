@@ -20,4 +20,4 @@ All projects are written in the C programming language. I tried to bring the cod
 
 I developed projects for ATmega16A in Atmel Studio, and for STM32F10C8T6(Blue Pill) in STM32CUBEIDE.
 
-## Each project can be viewed in detail separately. The description file is located in the project folder
+## Each project can be viewed in detail separately. The description file is located in the project folder.
